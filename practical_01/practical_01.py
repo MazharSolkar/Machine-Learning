@@ -7,15 +7,17 @@ print(df.head())
 
 #Plot to compare Milage(Independant variable) with Sell Price(Dependant variable)
 plt.scatter(df['Milage'],df['Sell Price'])
+plt.title("compare Milage with Sell price")
 plt.show()
 #Plot to compare Age(Independant variable) with Sell Price(Dependant variable)
 plt.scatter(df['Age'],df['Sell Price'])
+plt.title("compare Age with Sell price")
 plt.show()
 X = df[['Milage','Age']] #Determine X
 Y = df['Sell Price']     #Determine Y
 
-print("\nindependent varaible x :- \n",X) #Display X
-print("\ndependent variable y :- \n",Y) #Display Y
+print("\nindependent varaible x :- \n",X)
+print("\ndependent variable y :- \n",Y)
 
 from sklearn.model_selection import train_test_split
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y,test_size=0.2)
